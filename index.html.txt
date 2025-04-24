@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Southern Backpacking Trails</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+    }
+    section {
+      background: white;
+      margin-bottom: 2em;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    #mapWalls, #mapGeorgiaLoop {
+      height: 300px;
+      margin-top: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Southern Backpacking Trails</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Walls of Jericho</h2>
+      <p><strong>Location:</strong> Tennessee/Alabama border</p>
+      <p><strong>Distance:</strong> ~6.5 miles round trip</p>
+      <p><strong>Sights:</strong> Limestone cliffs, waterfalls, wildflowers</p>
+      <p><strong>Campsites:</strong> Primitive camping allowed near the bottom</p>
+      <p><strong>Water Sources:</strong> Streams along the way</p>
+      <div id="mapWalls"></div>
+    </section>
+
+    <section>
+      <h2>Georgia Loop</h2>
+      <p><strong>Location:</strong> North Georgia mountains</p>
+      <p><strong>Distance:</strong> ~60 miles loop</p>
+      <p><strong>Sights:</strong> Appalachian Trail segments, waterfalls, ridgelines</p>
+      <p><strong>Campsites:</strong> Multiple along the trail</p>
+      <p><strong>Water Sources:</strong> Abundant, but seasonal in places</p>
+      <div id="mapGeorgiaLoop"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const wallsMap = L.map('mapWalls').setView([34.9762, -86.0808], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(wallsMap);
+
+    const georgiaLoopMap = L.map('mapGeorgiaLoop').setView([34.6856, -83.7985], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(georgiaLoopMap);
+  </script>
+</body>
+</html>
