@@ -37,6 +37,24 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .elevation {
+      margin-top: 1em;
+      max-width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -58,10 +76,20 @@
       <h2>Georgia Loop</h2>
       <p><strong>Location:</strong> North Georgia mountains</p>
       <p><strong>Distance:</strong> ~60 miles loop</p>
-      <p><strong>Sights:</strong> Appalachian Trail segments, waterfalls, ridgelines</p>
-      <p><strong>Campsites:</strong> Multiple along the trail</p>
-      <p><strong>Water Sources:</strong> Abundant, but seasonal in places</p>
+      <p><strong>Sights:</strong> Appalachian Trail, Duncan Ridge Trail, Benton MacKaye Trail, waterfalls, mountain vistas</p>
+      <p><strong>Campsites:</strong> Backcountry sites at regular intervals along all segments</p>
+      <p><strong>Water Sources:</strong> Numerous creeks and springs, though some may dry up in late summer – treat all water</p>
+      <p><strong>Navigation Tips:</strong> The trail is unmarked as a loop; use maps or GPS and follow blazes: white for AT, blue for BMT, yellow for DRT</p>
+      <p><strong>Directions:</strong> Common start points include Woody Gap or Three Forks. Use <a href="https://maps.app.goo.gl/xKNvM8RAA6vPHvoQ6" target="_blank">this map link</a> to get directions.</p>
       <div id="mapGeorgiaLoop"></div>
+
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Appalachian_Trail_in_Georgia.jpg/640px-Appalachian_Trail_in_Georgia.jpg" alt="Appalachian Trail in Georgia">
+        <img src="https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5193019.jpg" alt="View from Blood Mountain">
+        <img src="https://www.atlantatrails.com/wp-content/uploads/2017/03/blood-mountain-hiking-trail-007.jpg" alt="Georgia Loop ridgeline">
+      </div>
+
+      <img class="elevation" src="https://i.imgur.com/8kUCJ7R.png" alt="Elevation profile of the Georgia Loop">
     </section>
   </main>
 
